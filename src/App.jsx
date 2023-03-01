@@ -13,6 +13,9 @@ const App = () => {
   const [todo, setTodo] = useState();
 
   const addTodo = () => {
+    setTitle((prev) => prev.trim());
+    setDescription((prev) => prev.trim());
+
     if (title.length === 0) {
       setTitleStatus(true);
     } else {

@@ -28,7 +28,7 @@ export const Header = ({
               placeholder='Enter title'
               className={titleIsEmpty ? 'empty' : undefined}
               value={title}
-              onChange={(event) => setTitle(event.target.value.trim())}
+              onChange={(event) => setTitle(event.target.value)}
             />
           </label>
         </div>
@@ -41,7 +41,7 @@ export const Header = ({
               placeholder='Enter description'
               className={descriptionIsEmpty ? 'empty' : undefined}
               value={description}
-              onChange={(event) => setDescription(event.target.value.trim())}
+              onChange={(event) => setDescription(event.target.value)}
             />
           </label>
         </div>
