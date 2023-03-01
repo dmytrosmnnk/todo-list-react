@@ -7,11 +7,11 @@
 
   height: 100vh;
   max-width: 100vw;
+  min-width: 600px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   gap: 50px;
 
   background-color: #e6e6fa;
@@ -25,6 +25,7 @@
   &__main {
     max-width: 100%;
     width: 50%;
+    min-width: 400px;
   }
 }
 
