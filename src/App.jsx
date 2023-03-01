@@ -13,22 +13,19 @@ const App = () => {
   const [todo, setTodo] = useState();
 
   const addTodo = () => {
-    setTitle((prev) => prev.trim());
-    setDescription((prev) => prev.trim());
-
-    if (title.length === 0) {
+    if (title.trim().length === 0) {
       setTitleStatus(true);
     } else {
       setTitleStatus(false);
     }
 
-    if (description.length === 0) {
+    if (description.trim().length === 0) {
       setDescriptionStatus(true);
     } else {
       setDescriptionStatus(false);
     }
 
-    if (title.length === 0 || description.length === 0) {
+    if (title.trim().length === 0 || description.trim().length === 0) {
       return;
     }
 
@@ -38,8 +35,8 @@ const App = () => {
       ...todos,
       {
         id: newId,
-        title,
-        description,
+        title: title.trim(),
+        description: description.trim(),
         status: false,
       },
     ]);
